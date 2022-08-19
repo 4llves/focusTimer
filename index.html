@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <title>FocusTimer</title>
+</head>
+
+<body class="">
+  <i class="ph-sun" id="toggleDark"></i>
+  <main>
+    <section>
+      <div id="timer">
+        <span class="minutes">25</span>
+        <span>:</span>
+        <span class="seconds">00</span>
+      </div>
+
+      <div id="controls">
+        <button class="play">
+          <i class="ph-play-circle"></i>
+        </button>
+
+        <button class="pause hide">
+          <i class="ph-pause-circle"></i>
+        </button>
+
+        <button class="stop">
+          <i class="ph-stop-circle"></i>
+        </button>
+
+        <button class="add-minutes">
+          <i class="ph-plus-circle"></i>
+        </button>
+
+        <button class="minus-minutes">
+          <i class="ph-minus-circle"></i>
+        </button>
+      </div>
+    </section>
+    <section id="cards">
+
+      <div class="card forest">
+        <button class="buttonForest">
+          <i class="ph-tree"></i>
+        </button>
+
+        <div class="slider">
+          <input id="volumes" class="volume" type="range" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+      </div>
+
+      <div class="card rain">
+        <button class="buttonRain">
+          <i class="ph-cloud-snow"></i>
+        </button>
+
+        <div class="slider">
+          <input id="volumes" class="volume" type="range" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+      </div>
+
+      <div class="card coffee-shop">
+        <button class="buttonCoffee">
+          <i class="ph-storefront"></i>
+        </button>
+
+        <div class="slider">
+          <input id="volumes" class="volume" type="range" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+      </div>
+
+      <div class="card fire">
+        <button class="buttonFire">
+          <i class="ph-flame"></i>
+        </button>
+
+        <div class="slider">
+          <input id="volumes" class="volume" type="range" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+
+  <footer>
+    <script src="js/index.js" type="module"></script>
+  </footer>
+</body>
+
+</html>

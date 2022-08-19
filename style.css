@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  background: #E3E3E3;
+}
+
+body {  
+  display: inline-block;
+  width: 100%;
+  height: 100%;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+body.bgGifForest {
+  background-image: url(https://data.whicdn.com/images/235560473/original.gif);  
+}
+
+body.bgGifRain {
+  background-image: url(https://68.media.tumblr.com/5b4cb0bd80d5f703e34a8d98664c7b0b/tumblr_oehp243iPi1slsf0no1_1280.gif);
+}
+
+body.bgGifCoffee {
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/028/312/436/original/bogdan-mb0sco-jazzhopcafef-exampleanim.gif?1594116332);
+}
+
+body.bgGifFire {
+  background-image: url(http://pa1.narvii.com/6730/aa1b16cfeee8462cc038253724ed95baec418a0b_00.gif);
+}
+
+#toggleDark {
+  position: absolute; 
+  font-size: 50px;
+  cursor: pointer;
+  margin-top: 5px;
+  left: 92%;  
+  top: 5%;
+}
+
+.ph-sun {
+  color: #000;  
+}
+
+.ph-moon {
+  color: #fff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 196px 233px;
+  gap: 192px;
+
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  top: 3em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px; 
+  backdrop: blur(10px);
+  
+  padding: 40px;  
+  
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.35);
+}
+
+.hide {  
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*SECTION 1*/
+
+#timer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+  margin-top: 58px;  
+}
+
+#timer span {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 126.166px;
+  line-height: 148px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #29292E;  
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #29292E;
+}
+
+.ph-play-circle,
+.ph-pause-circle,
+.ph-stop-circle,
+.ph-plus-circle,
+.ph-minus-circle {
+  font-size: 48px;
+}
+
+/*SECTION 2*/
+
+#cards {  
+  display: grid;  
+  grid-template-columns: repeat(2, auto);  
+  gap: 32px;    
+}
+
+#cards .card {
+  display: flex;
+  position: relative;  
+
+  flex-direction: co;
+  
+  width: 138px;
+  height: 152px;
+  background: #E1E1E6;
+  border-radius: 24px;  
+  box-shadow: 1px 1px 2px #29292E, 0 0 10px #29292E, 0 0 7px white;
+}
+
+#cards .card button {
+  width: 138px;
+  height: 152px;  
+}
+
+#cards .slider {
+  position: absolute;  
+  margin: 112px 24px 24px 24px;
+}
+
+#cards .card input[type=range] {  
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 90px;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #0000FF;
+  outline: none;
+}
+
+#volumes::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #0000FF;
+  border: none;
+}
+
+#volumes::-ms-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #e3e3e3;  
+  border: none;
+}
+
+#cards .card.active {
+  background: #02799D; 
+}
+
+.ph-tree,
+.ph-cloud-snow,
+.ph-storefront,
+.ph-flame {
+  font-size: 56px;
+  color: #323238;
+  margin: 24px 0 72px 0;
+}
+
+#cards .ph-flame.active {
+  color: #CC0000;
+}
+
+#cards .ph-cloud-snow.active {
+  color: #87CEEB;
+}
+
+#cards .ph-tree.active {
+  color: #7ED957;
+}
+
+#cards .ph-storefront.active {
+  color: #A18262;
+}
