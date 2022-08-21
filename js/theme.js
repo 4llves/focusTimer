@@ -1,47 +1,43 @@
 export default function Theme() {
-  const toggle = document.getElementById('toggleDark')
   const html = document.querySelector('html')
-  const span = document.querySelectorAll('span')
-  const button = document.querySelectorAll('button')
-  const card = document.querySelectorAll('#cards .card')
+  const sun = document.querySelector('.ph-sun')
+  const buttonToggle = document.querySelector('.toggleDark')
 
+  const getStyle = (element, style) =>
+    window
+      .getComputedStyle(element)
+      .getPropertyValue(style)
 
+  const initialColors = {
+    bg: getStyle(html, "--bg"),
+    bgCard: getStyle(html, "--bg-card"),
+    colorText: getStyle(html, "--color-text"),
+    bgActive: getStyle(html, "--bg-active")
+  }
 
-  toggle.addEventListener(`click`, function () {
-    this.classList.toggle(`ph-sun`)
+  const darkMode = {
+    bg: '#121214',
+    bgCard: '#29292E',
+    colorText: '#C4C4CC',
+    bgActive: '#0A3442'
+  }
 
-    if (this.classList.toggle(`ph-moon`)) {
-      html.style.background = `#121214`
-      html.style.color = `#e3e3e3`
-      span[0].style.color = `#e3e3e3`
-      span[1].style.color = `#e3e3e3`
-      span[2].style.color = `#e3e3e3`
-      button[0].style.color = `#e3e3e3`
-      button[1].style.color = `#e3e3e3`
-      button[2].style.color = `#e3e3e3`
-      button[3].style.color = `#e3e3e3`
-      button[4].style.color = `#e3e3e3`
-      card[0].style.background = `#e3e3e3`
-      card[1].style.background = `#e3e3e3`
-      card[2].style.background = `#e3e3e3`
-      card[3].style.background = `#e3e3e3`
+  const transformKey = key =>
+    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
 
+  const changeColors = (colors) => {
+    Object.keys(colors).map(key =>
+      html.style.setProperty(transformKey(key), colors[key])
+    )
+  }
 
+  buttonToggle.addEventListener("click", () => {
+    if (sun.classList.contains('hide') === true) {
+      changeColors(darkMode)
     } else {
-      html.style.background = `#e3e3e3`
-      html.style.color = `#323238`
-      span[0].style.color = `#323238`
-      span[1].style.color = `#323238`
-      span[2].style.color = `#323238`
-      button[0].style.color = `#323238`
-      button[1].style.color = `#323238`
-      button[2].style.color = `#323238`
-      button[3].style.color = `#323238`
-      button[4].style.color = `#323238`
-      card[0].style.background = `#323238`
-      card[1].style.background = `#323238`
-      card[2].style.background = `#323238`
-      card[3].style.background = `#323238`
+      changeColors(initialColors)
     }
   })
+
+
 }

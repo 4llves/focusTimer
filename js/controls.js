@@ -3,6 +3,8 @@ export default function Controls({
   buttonPause,
   buttonAddMinutes,
   buttonMinusMinutes,
+  buttonLightTheme,
+  buttonDarkTheme
 }) {
 
   function play() {
@@ -22,6 +24,16 @@ export default function Controls({
     buttonPlay.classList.remove('hide')
     buttonAddMinutes.classList.remove('hidden')
     buttonMinusMinutes.classList.remove('hidden')
+  }
+
+  function sun() {
+    buttonLightTheme.classList.add('hide')
+    buttonDarkTheme.classList.remove('hide')
+  }
+
+  function moon() {
+    buttonDarkTheme.classList.add('hide')
+    buttonLightTheme.classList.remove('hide')
   }
 
   function toggle(card) {
@@ -52,5 +64,7 @@ export default function Controls({
     toggle,
     removeActiveCard,
     changeBackground,
+    sun,
+    moon
   }
 }

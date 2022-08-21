@@ -5,8 +5,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #E3E3E3;
+  --bg-card: #E1E1E6;
+  --color-text: #323238;
+  --bg-active: #02799D;
+}
+
 html {
-  background: #E3E3E3;
+  background: var(--bg);
 }
 
 body {  
@@ -36,7 +43,7 @@ body.bgGifFire {
   background-image: url(http://pa1.narvii.com/6730/aa1b16cfeee8462cc038253724ed95baec418a0b_00.gif);
 }
 
-#toggleDark {
+.toggleDark {
   position: absolute; 
   font-size: 50px;
   cursor: pointer;
@@ -96,22 +103,28 @@ main {
   line-height: 148px;
 
   text-align: center;
-  text-transform: uppercase;
 
-  color: #29292E;  
+  color: var(--color-text);
 }
 
 #controls {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 40px;  
 }
 
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #29292E;
+  color: var(--text-color);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
 }
 
 .ph-play-circle,
@@ -120,6 +133,7 @@ button {
 .ph-plus-circle,
 .ph-minus-circle {
   font-size: 48px;
+  color: var(--color-text);
 }
 
 /*SECTION 2*/
@@ -134,11 +148,11 @@ button {
   display: flex;
   position: relative;  
 
-  flex-direction: co;
+  flex-direction: columns;
   
   width: 138px;
   height: 152px;
-  background: #E1E1E6;
+  background: var(--bg-card);
   border-radius: 24px;  
   box-shadow: 1px 1px 2px #29292E, 0 0 10px #29292E, 0 0 7px white;
 }
@@ -176,12 +190,12 @@ button {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #e3e3e3;  
+  background: var(--bg);  
   border: none;
 }
 
 #cards .card.active {
-  background: #02799D; 
+  background: var(--bg-active);
 }
 
 .ph-tree,
@@ -189,7 +203,7 @@ button {
 .ph-storefront,
 .ph-flame {
   font-size: 56px;
-  color: #323238;
+  color: var(--color-text);
   margin: 24px 0 72px 0;
 }
 

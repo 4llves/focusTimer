@@ -1,3 +1,7 @@
+/*THEMES*/
+const buttonLightTheme = document.querySelector('.ph-sun')
+const buttonDarkTheme = document.querySelector('.ph-moon')
+
 /*SECTION TIMER*/
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
@@ -53,4 +57,6 @@ export {
   volumeRain,
   volumeCoffee,
   volumeFire,
+  buttonLightTheme,
+  buttonDarkTheme
 }

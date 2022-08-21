@@ -19,10 +19,22 @@ import {
   volumeForest,
   volumeRain,
   volumeCoffee,
-  volumeFire
+  volumeFire,
+  buttonLightTheme,
+  buttonDarkTheme,
 } from './elements.js'
 
-export default function ({ controls, timer, sound, theme }) {
+export default function ({ controls, timer, sound }) {
+
+  buttonLightTheme.addEventListener('click', function () {
+    controls.sun()
+  })
+
+  buttonDarkTheme.addEventListener('click', function () {
+    controls.moon()
+  })
+
+
 
   buttonPlay.addEventListener('click', function () {
     controls.play()
